@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="row">
+  <div class="col">
+    <h1>Blogs</h1>
+  </div>
+  <div class="col">
+    <%= link_to "New blog", new_blog_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="row">
+  <div id="blogs">
+    <% @blogs.each do |blog| %>
+      <%= render blog %>
+    <% end %>
+  </div>
+</div>

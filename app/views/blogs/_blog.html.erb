@@ -1,0 +1,16 @@
+<div class="card my-3" id="<%= dom_id blog %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= blog.title %></h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= blog.body %></li>
+  </ul>
+  <div class="card-body">
+  <div class="row">
+    <%= link_to "All Blogs", blogs_path, class: "btn btn-primary m-1 col" unless current_page?(blogs_path) %>
+      <%= link_to "View", blog_path(blog), class: "btn btn-success m-1 col" %>
+      <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-warning m-1 col" %>
+      <% #<%= button_to "Destroy", blog, method: :delete, class: "btn btn-danger m-1 col-3" %>
+    </div>
+  </div>
+</div>
